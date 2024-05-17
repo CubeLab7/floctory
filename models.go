@@ -16,10 +16,10 @@ type SendParams struct {
 }
 
 type Request struct {
-	Page    int `json:"page"`
-	PerPage int `json:"per_page"`
-	From    int `json:"from"`
-	To      int `json:"to"`
+	Page    int   `json:"page"`
+	PerPage int   `json:"per_page"`
+	From    int64 `json:"from"`
+	To      int64 `json:"to"`
 }
 
 // ExchangeLeadsResponseData represents a single lead's data
