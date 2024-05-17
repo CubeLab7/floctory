@@ -1,4 +1,4 @@
-package softlinePayment
+package floctory
 
 type Config struct {
 	IdleConnTimeoutSec int

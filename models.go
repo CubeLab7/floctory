@@ -1,4 +1,4 @@
-package softlinePayment
+package floctory
 
 import (
 	"io"
