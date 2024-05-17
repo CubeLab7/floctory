@@ -22,6 +22,22 @@ type Request struct {
 	To      int64 `json:"to"`
 }
 
+type Data struct {
+	CreatedAt              int64  `json:"created_at"`                          // Unix timestamp
+	LastExchangeAcceptDate int64  `json:"last_exchange_accept_date,omitempty"` // Last time this user accepted your offer; unix timestamp
+	Email                  string `json:"email"`                               // Email user left when accepting your offer
+	FirstName              string `json:"first_name,omitempty"`                // First name
+	FullName               string `json:"full_name,omitempty"`                 // Full name
+	Name                   string `json:"name"`                                // Name user left when accepting your offer
+	Phone                  string `json:"phone"`                               // Phone user left when accepting your offer
+}
+
+type Response struct {
+	HasNextData bool   `json:"has_next_data"` // Has data
+	NextPage    string `json:"next_page"`     // Next page
+	Data        []Data `json:"data"`          // Array of lead data
+}
+
 // ExchangeLeadsResponseData represents a single lead's data
 type ExchangeLeadsResponseData struct {
 	Email                  string `json:"email"`                     // Email user left when accepting your offer

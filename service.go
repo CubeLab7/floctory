@@ -113,8 +113,8 @@ func (s *Service) Ping() (bool, error) {
 	return true, nil
 }
 
-func (s *Service) ExchangeLeads(data Request) (response *ExchangeLeadsResponse, err error) {
-	response = new(ExchangeLeadsResponse)
+func (s *Service) ExchangeLeads(data Request) (response *Response, err error) {
+	response = new(Response)
 
 	params := map[string]string{
 		"site_id":  fmt.Sprint(s.config.SiteID),
@@ -150,8 +150,8 @@ func (s *Service) ExchangeLeads(data Request) (response *ExchangeLeadsResponse, 
 	return
 }
 
-func (s *Service) ExchangePhoneLeads(data Request) (response *PhoneLeadsResponse, err error) {
-	response = new(PhoneLeadsResponse)
+func (s *Service) ExchangePhoneLeads(data Request) (response *Response, err error) {
+	response = new(Response)
 
 	params := map[string]string{
 		"site_id":  fmt.Sprint(s.config.SiteID),
